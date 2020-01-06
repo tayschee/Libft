@@ -6,7 +6,7 @@
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 11:48:38 by tbigot            #+#    #+#             */
-/*   Updated: 2019/10/12 13:26:28 by tbigot           ###   ########.fr       */
+/*   Updated: 2020/01/06 14:49:15 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		i;
 
 	i = 0;
-	size = ft_strlen(&s[start]);
+	size = ft_strlen(s);
 	if (size < start)
 		size = 0;
 	else if (size > len)
