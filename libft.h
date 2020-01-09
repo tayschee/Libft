@@ -6,16 +6,21 @@
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:30:27 by tbigot            #+#    #+#             */
-/*   Updated: 2019/11/15 11:29:42 by tbigot           ###   ########.fr       */
+/*   Updated: 2020/01/09 13:36:35 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
 # include <string.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {
