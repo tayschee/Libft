@@ -6,7 +6,7 @@
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 11:21:13 by tbigot            #+#    #+#             */
-/*   Updated: 2020/01/09 13:31:49 by tbigot           ###   ########.fr       */
+/*   Updated: 2020/01/29 10:49:24 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,21 +75,21 @@ static int		ft_return(char **stc, char **line, int i)
 int				get_next_line(int fd, char **line)
 {
 	char			buf[BUFFER_SIZE + 1];
-	static char		*stc[10000];
+	static char		*stc;
 	char			*tmp;
 	int				i;
 
 	if (!line || fd < 0)
-		return (free_all(stc, -1));
+		return (free_all(&stc, -1));
 	while ((i = read(fd, buf, BUFFER_SIZE)) > 0)
 	{
 		buf[i] = '\0';
-		if (!(tmp = ft_strjoin(stc[fd], buf)))
-			return (free_all(&stc[fd], -1));
-		free_all(&stc[fd], 1);
-		stc[fd] = tmp;
-		if ((lineornot(stc[fd])) != -1)
+		if (!(tmp = ft_strjoin(stc, buf)))
+			return (free_all(&stc, -1));
+		free_all(&stc, 1);
+		stc = tmp;
+		if ((lineornot(stc)) != -1)
 			break ;
 	}
-	return (ft_return(&stc[fd], line, i));
+	return (ft_return(&stc, line, i));
 }

@@ -6,7 +6,7 @@
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 11:48:38 by tbigot            #+#    #+#             */
-/*   Updated: 2020/01/06 14:49:15 by tbigot           ###   ########.fr       */
+/*   Updated: 2020/01/28 18:26:08 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	size = ft_strlen(s);
 	if (size < start)
-		size = 0;
-	else if (size > len)
-		size = len;
-	if (!(newtab = ft_calloc(size + 1, sizeof(char))))
+		len = 0;
+	if (!(newtab = ft_calloc(len + 1, sizeof(char))))
 		return (NULL);
-	while (size > i)
+	while (i < len)
 	{
 		newtab[i] = s[start + i];
 		i++;

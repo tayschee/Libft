@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   free_string.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 15:03:50 by tbigot            #+#    #+#             */
-/*   Updated: 2020/02/26 12:09:36 by tbigot           ###   ########.fr       */
+/*   Created: 2020/03/03 11:22:29 by tbigot            #+#    #+#             */
+/*   Updated: 2020/03/03 15:38:47 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <libc.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	free_malloc_2d(char **tab)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (len > i)
+	while(tab[i])
 	{
-		((unsigned char *)b)[i] = (unsigned char)c;
+		free(tab[i]);
 		i++;
 	}
-	return (b);
+	free(tab);
 }

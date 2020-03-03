@@ -6,7 +6,7 @@
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:41:38 by tbigot            #+#    #+#             */
-/*   Updated: 2019/10/22 14:17:45 by tbigot           ###   ########.fr       */
+/*   Updated: 2020/01/29 10:47:22 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,9 @@ char			**ft_split(char const *s, char c)
 			j++;
 		tfin[i] = creatab(&s[j], c);
 		if (tfin[i] == NULL)
+		{
 			return (letsfree(tfin, i));
+		}
 		while (check(s[j], c) == 0 && s[j])
 			j++;
 	}

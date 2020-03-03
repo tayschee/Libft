@@ -6,7 +6,7 @@
 /*   By: tbigot <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:30:27 by tbigot            #+#    #+#             */
-/*   Updated: 2020/01/09 13:36:35 by tbigot           ###   ########.fr       */
+/*   Updated: 2020/03/03 11:26:11 by tbigot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,7 @@ char				*ft_utoa(unsigned int nbr);
 char				*ft_ultoa_base(unsigned long int nbr, char *base);
 char				*ft_utoa_base(unsigned int nbr, char *base);
 char				*ft_strldup(const char *s1, int max);
+int					get_next_line(int fd, char **line);
+void				free_malloc_2d(char **tab);
 
 #endif
