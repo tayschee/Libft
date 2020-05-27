@@ -44,11 +44,6 @@ static int	count_malloc(unsigned long nb, int size_base)
 	int i;
 
 	i = 0;
-	if (nb < 0)
-	{
-		i++;
-		nb = -nb;
-	}
 	while (nb > 0)
 	{
 		nb = nb / size_base;
@@ -87,8 +82,6 @@ char		*ft_ultoa_base(unsigned long int nbr, char *base)
 	malloc_size = count_malloc(nbr, size_base);
 	if (!(txt = calloc((malloc_size + 1), sizeof(char))))
 		return (NULL);
-	if (nbr < 0)
-		nbr = -nbr;
 	if (nbr == 0)
 		txt[0] = 0 + 48;
 	else
