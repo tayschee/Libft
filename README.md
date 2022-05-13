@@ -1,6 +1,6 @@
 # Libft
 ![42](https://img.shields.io/static/v1?label=&labelColor=000000e&logo=42&message=project&color=000000&style=flate)
-![Stars](https://img.shields.io/github/stars/tayschee/Cub3D?style=social)
+![Stars](https://img.shields.io/github/stars/tayschee/Libft?style=social)
 
 ## Summary
 - [About The Project](#about-the-project)
